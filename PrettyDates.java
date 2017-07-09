@@ -7,9 +7,9 @@ public class PrettyDates {
         if (month <= 9) {
             return ("0" + month);
         } else {
-            return (month + " ");
+            return (month + "");
         }
-
+        
     }
 
     public static String nameFormat(int year, int month, int day) {
@@ -43,16 +43,13 @@ public class PrettyDates {
         return monthName + " " + day + "," + " " + year;
     }
 
-
     public static String slashFormat(int year, int month, int day) {
-
-        return month + "/" + day  + "/" + year;
-
+        return formatNumberAsTwoDigits(month) + "/" + formatNumberAsTwoDigits(day)  + "/" + year;
     }
 
-    public static String dashFormat(int year, int month, int day){
-        String formatNumberAsTwoDigits;
-        return year + "-" + month + "-" + day;
+    public static String dashFormat(int year, int month, int day)
+    {
+        return year + "-" + formatNumberAsTwoDigits(month) + "-" + formatNumberAsTwoDigits(day);
     }
 
     //------------------
@@ -70,7 +67,7 @@ public class PrettyDates {
         System.out.println(formatNumberAsTwoDigits(3));
         System.out.println(formatNumberAsTwoDigits(9));
         System.out.println(formatNumberAsTwoDigits(10));
-        System.out.println(formatNumberAsTwoDigits(12));
+        System.out.println(formatNumberAsTwoDigits(12) + "\n");
 
         printDate(2014, 10, 4);//parameter values -- method call
         printDate(2015, 1, 1);
